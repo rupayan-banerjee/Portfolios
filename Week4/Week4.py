@@ -42,7 +42,7 @@ df_test = df_test.drop(columns=constant_columns)
 # Display the constant columns
 print('Constant value columns:', constant_columns)
 
-# Identify columns with few unique integer values (e.g., fewer than 10 unique values)
+# Identify columns with few unique integer values
 categorical_columns = [col for col in df_train.columns if
                        df_train[col].nunique() < 10 and df_train[col].dtype == 'int64']
 
@@ -153,7 +153,7 @@ X = df_train_balanced.drop(columns='Class')
 y = df_train_balanced['Class']
 
 # Split the data into training and validation sets
-X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=1)
+X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.3, random_state=1)
 
 # Initialize the models
 models = {
