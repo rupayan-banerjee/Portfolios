@@ -253,4 +253,3 @@ decision_tree_sp.fit(X_sp, y_sp)
 tree_rules = export_text(decision_tree_sp, feature_names=list(X_sp.columns))
 print("Decision Tree Rules based on SP features:")
 print(tree_rules)
-
